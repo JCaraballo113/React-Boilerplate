@@ -1,3 +1,6 @@
-h1 {
-  color: #777;
-}
+@import "base/variables";
+
+// foundation
+@import "base/foundation-settings";
+@import "foundation";
+@include foundation-everything;

@@ -4,12 +4,7 @@ var React = require('react');
 var Main = (props) => {
   return (
       <div>
-          <div>
-            <div className>
-              <h1>Main.jsx Rendered</h11>
-              {props.children}
-            </div>
-          </div>
+        <h1>Main.jsx</h1>
       </div>
   );
 };
