@@ -13,6 +13,7 @@
     "axios": "^0.11.1",
     "express": "^4.13.4",
     "react": "^15.0.2",
+    "react-bootstrap": "^0.29.5",
     "react-dom": "^15.0.2",
     "react-router": "^2.4.1"
   },
@@ -24,8 +25,6 @@
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
     "expect": "^1.20.1",
-    "foundation-sites": "^6.2.1",
-    "jquery": "^2.2.3",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
     "karma-mocha": "^1.0.1",
