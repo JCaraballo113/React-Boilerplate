@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Route, Router, IndexRoute, hashHistory} from 'react-router';
 import Main from './components/Main';
 
-require('style!css!sass!applicationStyles');
+require('./styles/app.scss');
 
 ReactDOM.render(
   <h1>React Boilerplate Application</h1>,

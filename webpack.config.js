@@ -3,30 +3,46 @@ var path = require('path');
 
 module.exports = {
   entry: [
-    './app/app.jsx'
+    './app/app.js'
   ],
   output: {
     path: __dirname,
     filename: './public/bundle.js'
   },
   resolve: {
-    root: __dirname,
+    modules: [
+      path.join(__dirname, "app"),
+      "node_modules" 
+      ],
     alias: {
-      Main: 'app/components/Main.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
   module: {
-    loaders: [
+    rules: [
       {
-        loader: 'babel-loader',
-        query: {
+        test: /\.js?$/,
+        loader: "babel-loader",
+         query: {
           presets: ['react', 'es2015', 'stage-0']
         },
-        test: /\.js?$/,
         exclude: /(node_modules|bower_components)/
-      }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+        {
+            loader: "style-loader" // creates style nodes from JS strings
+        }, 
+        {
+            loader: "css-loader" // translates CSS into CommonJS
+        }, 
+        {
+            loader: "sass-loader" // compiles Sass to CSS
+        },
+        ]
+      },
     ]
   },
   devtool: 'cheap-module-eval-source-map'
